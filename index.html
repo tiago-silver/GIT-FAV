@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./js/main.js" defer></script>
+
+    <title>GitFav</title>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <img src="./assets/logo.svg" alt="">
+            <div class="inputs">
+                <label class="sr-only" for="search">Usuário do github</label>
+                <input type="text" id="search" placeholder="Github username">
+                <button class="ph ph-star search-button"><span class="sr-only">Favoritar</span></button>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Usuários</th>
+                            <th scope="col">Repositórios</th>
+                            <th scope="col">Seguidores</th>
+                            <th scope="col">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      
+                       
+                        <!-- <tr >
+                          
+                        </tr>
+                        <tr>
+                            <td class="user">
+                             <img src="https://github.com/tiago-silver.png" alt="Imagem do Tiago Luiz Pereira Silva">
+                            <a href="">
+                                <p>
+                                    Tiago Silva
+                                </p>
+                                <span>/tiago-silver</span>
+                            </a>
+                            </td>
+                            <td>56</td>
+                            <td>100</td>
+                            <td>
+                                 <button class="remove">Remover</button>
+                             </td>
+                         </tr> -->
+                    </tbody>
+                
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

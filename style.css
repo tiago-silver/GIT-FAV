@@ -1,0 +1,304 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    font-family: 'Roboto',sans-serif;
+    --bg-color: #000;
+    --tr-bg-color: #092d38;
+    --text-color: #e1e1e6;
+    --bg-color-input: #06181c;
+    --bg-color-button: #065e7c;
+    --bg-color-odd:   #06161b;
+    --bg-color-even: #4a808c ;
+    --border-color:#86E9FF;
+    --bg-color-button-remove: #f75a68;
+    --text-empty-color: #4e5455;
+
+}
+body{
+    font-size: 1.6rem;
+    background-color: var(--bg-color);
+}
+#app{
+    padding: 5rem 2rem;
+    max-width: 70rem;
+    margin: auto;
+    
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+header img{
+    margin-bottom: 2rem;
+}
+header .inputs{
+    display: flex;
+    gap: .5rem;
+    width: 100%;
+    
+}
+.inputs input{
+    background-color: var(--bg-color-input);
+    width: 100%;
+    height: 4rem;
+    padding: 1.6rem;
+    border-radius: .5rem;
+    border: 0;
+    color: var(--text-color);
+}
+.inputs button{
+    padding: 1rem;
+    background-color: var(--bg-color-button);
+    border-radius: .5rem;
+    border: 0;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .3s;
+}
+.inputs button:hover{
+    background-color: var(--text-color);
+    color: var(--bg-color-button);
+}
+
+
+table *{
+    font-size: 1.4rem;
+    color: var(--text-color);
+   
+}
+table{
+    border-radius: .5rem;
+    overflow: hidden;
+    width: 100%;
+    border-collapse: collapse;
+    
+    
+}
+thead{
+    display: none;
+    /* position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);  
+    white-space: nowrap;
+    border-width: 0; */
+}
+
+
+tbody {
+    display:block;
+    overflow-y: auto;
+    height: 35rem;
+    
+    
+}
+
+.td-empty{
+   
+    height: 30rem;
+    justify-content: left;
+
+}
+.td-empty .text-empty{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.td-empty img{
+    width: 8rem;
+    height: 7rem;
+}
+.td-empty p{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-empty-color);
+}
+
+
+tbody tr{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--bg-color-even);
+    
+}
+tbody tr:nth-child(odd){
+    background-color:var(--bg-color-odd);
+}
+tbody tr:nth-child(even){
+    background-color: var(--bg-color-even);
+    
+}
+
+
+tbody td{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--text-color);
+    
+}
+
+tbody::-webkit-scrollbar{
+    
+    background-color: var(--bg-color-odd);
+    width: 1rem;
+}
+tbody::-webkit-scrollbar-thumb{
+    background-color: var(--text-empty-color);
+    border-radius: 1rem;
+}
+table td::before{
+    content: attr(data-label);
+    float: left;
+    padding: 1rem;
+    
+}
+.user{
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+}
+
+.user img{
+    width:5.6rem ;
+    height: 5.6rem;
+    border-radius: 50%;
+    transition: scale .3s;
+}
+.user img:hover{
+    scale: 1.3;
+}
+.user a{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    text-decoration: none;
+}
+.user .user-wrap{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+.user a p{
+    font-weight: bold;
+    transition: all .3s;
+}
+.user a p:hover{
+    color: var(--tr-bg-color);
+    scale: 1.1;
+}
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);  
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.remove{
+    background-color: transparent;
+    border: 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--bg-color-button-remove);
+    cursor: pointer;
+}
+
+@media (min-width: 760px){
+
+    #app{
+        max-width: 100rem;
+    }
+    header{
+        flex-direction: row;
+        gap:10rem;
+    }
+
+    .container{
+        padding: 0;
+    }
+    table *{
+        font-size: 1.5rem;
+    }
+    thead{
+        display: block;
+        /* position: none;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);  
+        white-space: nowrap;
+        border-width: 0; */
+    }
+    thead tr{
+        background-color: var(--tr-bg-color);
+        color: var(--text-color);
+        
+    }
+    table td::before{
+        display: none;
+        
+    }
+    
+    
+    thead th{
+        font-size: 2rem;
+        padding: 1.6rem;
+        text-align: left;
+        
+    }
+
+    thead, tr{
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+    .td-empty{
+        justify-content: center;
+    
+    }
+    .td-empty .text-empty{
+        gap: 3rem;
+    }
+    .td-empty img{
+        width: 10rem;
+        height: 9rem;
+    }
+    .td-empty p{
+        font-size: 2.5rem;
+    }
+    tbody tr{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    tbody td{
+        padding: 1rem;
+        border: none;
+        width: 100%;
+        text-align: left;
+    }
+    .remove{
+        font-size: 2rem;
+    }
+}
